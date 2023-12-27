@@ -26,9 +26,10 @@ mongoose.connection.once('open', () => {
 });
 
 // Middleware
-app.use(cors()); // Enable CORS for all routes
+
 app.use(bodyParser.json()); // Parse JSON bodies
 app.use(express.json());
+app.use(cors()); // Enable CORS for all routes
 
 // Routes
 app.use('/users', userRoutes);
