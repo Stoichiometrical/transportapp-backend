@@ -33,9 +33,9 @@ app.use(express.json());
 // Routes
 app.use('/users', userRoutes);
 app.use('/trips', tripRoutes);
-app.get("/",(res,req,)=>{
-    res.send("Server is running")
-})
+app.get('/', (req, res) => {
+    res.send('Server is awake!');
+});
 
 // Start the server
 const PORT = process.env.PORT || 3001;
